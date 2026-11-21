@@ -66,46 +66,15 @@ select {
 .brand {
   display: inline-flex;
   align-items: center;
-  gap: 0.8rem;
   min-width: 0;
 }
 
-.brand-mark {
-  width: 2.7rem;
-  height: 2.7rem;
-  display: grid;
-  place-items: center;
-  position: relative;
-}
-
-.brand-mark svg {
-  width: 100%;
-  height: 100%;
-  fill: var(--navy);
-}
-
-.brand-copy {
-  display: flex;
-  flex-direction: column;
-  line-height: 1.1;
-}
-
-.brand-title {
-  font-family: var(--display-font);
-  font-weight: 700;
-  letter-spacing: -0.05em;
-  font-size: clamp(1.15rem, 1vw + 0.6rem, 1.8rem);
-  color: var(--navy);
-  white-space: nowrap;
-}
-
-.brand-tag {
-  font-size: 0.5rem;
-  letter-spacing: 0.22em;
-  color: #6e8198;
-  font-weight: 700;
-  margin-top: 0.12rem;
-  white-space: nowrap;
+.brand-logo {
+  display: block;
+  width: auto;
+  height: auto;
+  max-height: 52px;
+  max-width: 100%;
 }
 
 .main-nav {
@@ -117,10 +86,10 @@ select {
 }
 
 .main-nav a {
-  font-size: 0.78rem;
+  font-size: 1rem;
   color: var(--navy);
   font-weight: 600;
-  letter-spacing: -0.01em;
+  letter-spacing: normal;
   position: relative;
 }
 
@@ -132,6 +101,28 @@ select {
   bottom: -0.45rem;
   height: 2px;
   background: var(--gold);
+}
+
+.menu-toggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--navy);
+  border-radius: 2px;
 }
 
 .btn {
@@ -158,7 +149,7 @@ select {
 
 .btn-small {
   padding: 0.9rem 1.2rem;
-  font-size: 0.74rem;
+  font-size: 1rem;
   min-width: 220px;
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2);
 }
@@ -206,20 +197,26 @@ select {
   display: flex;
   align-items: center;
   padding: 2.2rem 3rem 2.1rem;
-  background:
-    linear-gradient(90deg, rgba(8, 24, 38, 0.74) 0%, rgba(11, 28, 44, 0.54) 34%, rgba(17, 41, 56, 0.16) 100%),
-    url("assets/MoreSecurityToday.jpg") center 72% / cover no-repeat;
+  background: url("assets/MoreSecurityToday.jpg") 55% center / cover no-repeat;
+}
+
+.hero-photo-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, #03203d 0%, #03203d 34%, transparent 100%);
+  pointer-events: none;
 }
 
 .hero-content {
-  max-width: 540px;
+  position: relative;
+  max-width: 430px;
   color: var(--white);
   z-index: 1;
 }
 
 .eyebrow {
   margin: 0 0 0.8rem;
-  font-size: 0.93rem;
+  font-size: 16px;
   line-height: 1.2;
   max-width: 520px;
   letter-spacing: 0.02em;
@@ -232,7 +229,7 @@ select {
   font-family: var(--display-font);
   font-size: clamp(3rem, 3vw, 5rem);
   line-height: 0.82;
-  letter-spacing: -0.065em;
+  letter-spacing: normal;
   font-weight: 700;
   max-width: 620px;
 }
@@ -243,22 +240,6 @@ select {
   font-size: 1.04rem;
   line-height: 1.6;
   color: rgba(255, 255, 255, 0.82);
-}
-
-.hero-script {
-  position: absolute;
-  right: 3.2rem;
-  bottom: 1.7rem;
-  font-family: var(--display-font);
-  font-size: clamp(2.5rem, 2vw + 1.2rem, 3.7rem);
-  line-height: 0.88;
-  font-style: italic;
-  color: #f3d4a0;
-  text-align: center;
-  text-shadow: 0 0 22px rgba(255, 190, 116, 0.18);
-  transform: rotate(-7deg);
-  letter-spacing: -0.05em;
-  z-index: 1;
 }
 
 .feature-strip {
@@ -297,7 +278,7 @@ select {
 .feature-card h3 {
   margin: 0 0 0.55rem;
   font-family: "Inter", sans-serif;
-  font-size: 0.95rem;
+  font-size: 1.125rem;
   line-height: 1.3;
   color: var(--navy);
   font-weight: 800;
@@ -305,7 +286,7 @@ select {
 
 .feature-card p {
   margin: 0;
-  font-size: 0.76rem;
+  font-size: 1rem;
   line-height: 1.5;
   color: var(--muted);
 }
@@ -319,32 +300,11 @@ select {
 }
 
 .market-visual {
-  background: linear-gradient(180deg, rgba(9, 18, 31, 0.3), rgba(9, 18, 31, 0.48)),
-    url("https://images.unsplash.com/photo-1517849845537-4d257902454a?auto=format&fit=crop&w=1200&q=80") center 55% / cover no-repeat;
+  background: url("assets/market_bear_port.jpg") right 55% / cover no-repeat;
   min-height: 330px;
   border-radius: 0.9rem;
   overflow: hidden;
   position: relative;
-}
-
-.market-graphic {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 180px;
-  background: linear-gradient(180deg, rgba(253, 91, 91, 0.12), rgba(248, 61, 61, 0.55));
-}
-
-.market-graphic::before {
-  content: "";
-  position: absolute;
-  inset: 15% 8% auto auto;
-  width: 70%;
-  height: 70%;
-  background: linear-gradient(180deg, transparent 0%, rgba(255, 63, 63, 0.9) 18%, rgba(255, 63, 63, 0.75) 100%);
-  clip-path: polygon(0 78%, 7% 76%, 14% 70%, 22% 38%, 31% 54%, 43% 50%, 48% 42%, 58% 58%, 71% 60%, 82% 40%, 100% 48%, 100% 100%, 0 100%);
-  filter: drop-shadow(0 0 16px rgba(226, 40, 40, 0.42));
 }
 
 .market-copy {
@@ -356,7 +316,7 @@ select {
   font-family: var(--display-font);
   font-size: clamp(2.2rem, 1.6vw + 1.3rem, 3.3rem);
   line-height: 0.96;
-  letter-spacing: -0.06em;
+  letter-spacing: normal;
   color: var(--navy);
 }
 
@@ -396,7 +356,7 @@ select {
   background: rgba(21, 89, 180, 0.1);
   color: var(--navy);
   font-weight: 900;
-  font-size: 0.8rem;
+  font-size: 1rem;
 }
 
 .emphasis {
@@ -418,15 +378,15 @@ select {
 .lead-card h3 {
   margin: 0 0 0.75rem;
   font-family: var(--display-font);
-  font-size: clamp(1.8rem, 1.2vw + 1.1rem, 2.8rem);
+  font-size: 1.75rem;
   line-height: 0.98;
-  letter-spacing: -0.06em;
+  letter-spacing: normal;
   color: var(--white);
 }
 
 .lead-card p {
   margin: 0 0 1rem;
-  font-size: 0.82rem;
+  font-size: 1rem;
   line-height: 1.6;
   color: rgba(255, 255, 255, 0.78);
 }
@@ -439,12 +399,12 @@ select {
 .consultation-form label {
   display: grid;
   gap: 0.38rem;
-  font-size: 0.875rem;
+  font-size: 1rem;
   color: #eff6ff;
 }
 
 .consultation-form span {
-  font-size: 0.75rem;
+  font-size: 1rem;
   color: rgba(255, 255, 255, 0.8);
 }
 
@@ -474,12 +434,17 @@ select {
 
 .consultation-form select {
   appearance: none;
+  color: #fff;
+}
+
+.consultation-form select option {
+  color: #000;
 }
 
 .lead-card small {
   display: block;
   margin-top: 0.8rem;
-  font-size: 0.64rem;
+  font-size: 1rem;
   color: rgba(255, 255, 255, 0.58);
   text-align: center;
 }
@@ -507,7 +472,7 @@ select {
   font-family: var(--display-font);
   font-size: clamp(2.2rem, 1.7vw + 1rem, 3.2rem);
   line-height: 0.96;
-  letter-spacing: -0.06em;
+  letter-spacing: normal;
   color: var(--navy);
 }
 
@@ -530,7 +495,7 @@ select {
 
 .call-label {
   display: block;
-  font-size: 0.8rem;
+  font-size: 1rem;
   color: var(--navy);
   font-weight: 700;
 }
@@ -578,13 +543,13 @@ select {
   display: block;
   color: var(--navy);
   font-weight: 700;
-  font-size: 0.72rem;
+  font-size: 1rem;
 }
 
 .mini-sub {
   display: block;
   color: var(--muted);
-  font-size: 0.68rem;
+  font-size: 1rem;
   margin-top: 0.15rem;
 }
 
@@ -594,64 +559,16 @@ select {
   padding: 1.2rem 2rem 1.4rem;
 }
 
-.footer-top {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-  padding-bottom: 0.8rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.18);
-}
-
-.footer-nav {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 1.4rem;
-  font-size: 0.78rem;
-  color: rgba(255, 255, 255, 0.9);
-}
-
-.footer-nav a {
-  font-weight: 500;
-}
-
-.socials {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-}
-
-.socials a {
-  width: 2.5rem;
-  height: 2.5rem;
-  display: grid;
-  place-items: center;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.92);
-  color: #0d2d47;
-  font-weight: 700;
-  font-size: 1.15rem;
-  line-height: 1;
-  border: 1px solid rgba(255, 255, 255, 0.18);
-}
-
-.socials a:last-child {
-  font-size: 1.15rem;
-  letter-spacing: -0.06em;
-}
-
 .footer-bottom {
   display: grid;
   grid-template-columns: 1.8fr 0.8fr;
   gap: 1.4rem;
-  padding-top: 0.82rem;
   align-items: start;
 }
 
 .footer-bottom p {
   margin: 0;
-  font-size: 0.66rem;
+  font-size: 0.75rem;
   line-height: 1.7;
   color: rgba(255, 255, 255, 0.76);
   text-align: left;
@@ -674,6 +591,10 @@ select {
     grid-template-columns: 1fr;
   }
 
+  .market-visual {
+    min-height: 220px;
+  }
+
   .contact-banner {
     grid-template-columns: 1fr;
     gap: 1.2rem;
@@ -683,27 +604,143 @@ select {
   .banner-cta {
     justify-self: center;
   }
+}
 
+@media (max-width: 1200px) {
+  .topbar .btn-small {
+    display: none;
+  }
+}
+
+@media (max-width: 991px) {
+  .topbar {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    height: 68px;
+    padding: 0 20px;
+    text-align: left;
+    border-bottom: 1px solid #e2e8f0;
+  }
+
+  .brand-logo {
+    max-height: 42px;
+  }
+
+  .menu-toggle {
+    display: inline-flex;
+  }
+
+  .main-nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #ffffff;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    border-top: 1px solid #e2e8f0;
+    border-bottom: 1px solid #e2e8f0;
+    box-shadow: 0 8px 20px rgba(17, 45, 77, 0.08);
+    z-index: 20;
+  }
+
+  .main-nav.is-open {
+    display: block;
+  }
+
+  .main-nav a {
+    display: block;
+    padding: 14px 20px;
+    border-bottom: 1px solid #f1f5f9;
+    font-size: 1rem;
+  }
+
+  .main-nav a:last-child {
+    border-bottom: 0;
+  }
+
+  .main-nav a:hover::after {
+    display: none;
+  }
+
+  .hero {
+    min-height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 0 0 2rem;
+    background: #03203d;
+  }
+
+  .hero-photo-overlay {
+    position: relative;
+    inset: auto;
+    width: 100%;
+    height: 300px;
+    background:
+      linear-gradient(180deg, transparent 45%, #03203d 100%),
+      url("assets/MoreSecurityToday.jpg") 75% 25% / cover no-repeat;
+  }
+
+  .hero-content {
+    max-width: 530px;
+    margin: -24px auto 0;
+    padding: 0 1.25rem;
+    text-align: center;
+    z-index: 1;
+  }
+
+  .eyebrow {
+    margin: 0 0 0.85rem;
+    max-width: none;
+    font-size: 16px;
+    line-height: 1.4;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #e5b869;
+  }
+
+  .hero h1 {
+    max-width: none;
+    font-size: 32px;
+    line-height: 1.2;
+    letter-spacing: normal;
+  }
+
+  .lead {
+    max-width: none;
+    margin: 1rem 0 1.35rem;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #dbe4ee;
+  }
+
+  .hero .btn-cta {
+    width: 100%;
+    max-width: 380px;
+    margin: 0 auto;
+    padding: 16px 1.25rem;
+    background: #dca852;
+    color: var(--navy);
+  }
+
+  .market-visual {
+    background: url("assets/market_bear_land.jpg") 60% 55% / cover no-repeat;
+  }
 }
 
 @media (max-width: 920px) {
   .feature-strip {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
-
-  .hero {
-    min-height: 460px;
-  }
-
-  .hero-script {
-    right: 1.5rem;
-    bottom: 1rem;
-  }
 }
 
 @media (max-width: 640px) {
-  .topbar,
-  .hero,
   .feature-strip,
   .market-section,
   .contact-banner,
@@ -712,50 +749,43 @@ select {
     padding-right: 1rem;
   }
 
-  .main-nav {
-    gap: 0.8rem 1.2rem;
-  }
-
-  .brand-title {
-    white-space: normal;
-  }
-
-  .brand-tag {
-    letter-spacing: 0.12em;
-  }
-
-  .hero {
-    padding-top: 1.4rem;
-    padding-bottom: 1.5rem;
-  }
-
-  .hero-content {
-    max-width: 100%;
-  }
-
-  .hero-script {
-    position: static;
-    transform: none;
-    margin-top: 1rem;
-    text-align: left;
-  }
 
   .feature-strip {
     grid-template-columns: 1fr;
   }
 
   .btn-small,
-  .btn-cta,
   .btn-form {
     width: 100%;
+    min-width: 0;
   }
 
-  .topbar {
-    padding-bottom: 1rem;
+
+  .banner-call,
+  .banner-cta {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding-bottom: 1.5rem;
   }
 
-  .footer-top {
-    flex-direction: column;
-    align-items: flex-start;
+  .hero-photo-overlay {
+    height: 240px;
+  }
+
+  .hero-content {
+    padding: 0 1rem;
+  }
+
+  .hero h1 {
+    font-size: 28px;
+  }
+
+  .hero .btn-cta {
+    max-width: 100%;
   }
 }

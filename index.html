@@ -19,20 +19,27 @@
   <body>
     <div class="page-shell">
       <header class="topbar">
-        <div class="brand" aria-label="The Secured Retirement home">
-          <div class="brand-mark" aria-hidden="true">
-            <svg viewBox="0 0 58 58" role="img" aria-hidden="true">
-              <path d="M29 2 49 8v16.2C49 38.2 42 47.7 29 54 16 47.7 9 38.2 9 24.2V8l20-6Zm0 9.4 12.2 3.8v11.1c0 8.8-5.6 16.2-12.2 20.1-6.6-3.9-12.2-11.3-12.2-20.1V15.2L29 11.4Z"/>
-              <path d="M27 16h4v12h-4zm-1 14h6v4h-6z"/>
-            </svg>
-          </div>
-          <div class="brand-copy">
-            <span class="brand-title">The Secured Retirement</span>
-            <span class="brand-tag">PROTECT • PRESERVE • ENJOY</span>
-          </div>
-        </div>
+        <a class="brand" href="index.html" aria-label="The Secured Retirement home">
+          <img
+            src="assets/The_Secured_Retirement.png"
+            alt="The Secured Retirement"
+            class="brand-logo"
+          />
+        </a>
 
-        <nav class="main-nav" aria-label="Main navigation">
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="main-nav"
+          aria-label="Open navigation menu"
+        >
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </button>
+
+        <nav class="main-nav" id="main-nav" aria-label="Main navigation">
           <a href="#">Home</a>
           <a href="#">Our Approach</a>
           <a href="#">Services</a>
@@ -46,6 +53,7 @@
 
       <main>
         <section class="hero" aria-label="Retirement planning hero section">
+          <div class="hero-photo-overlay" aria-hidden="true"></div>
           <div class="hero-content">
             <p class="eyebrow">DON'T LET ANOTHER BEAR MARKET DESTROY YOUR RETIREMENT DREAMS</p>
             <h1>Protect Your Retirement Accounts From the Next Market Downturn</h1>
@@ -60,13 +68,6 @@
               </span>
               Schedule Your Free Consultation
             </button>
-          </div>
-
-          <div class="hero-script" aria-label="More security today, more freedom tomorrow">
-            More<br />
-            Security Today,<br />
-            More Freedom<br />
-            Tomorrow.
           </div>
         </section>
 
@@ -113,9 +114,7 @@
         </section>
 
         <section class="market-section" aria-label="Market risk information and consultation form">
-          <div class="market-visual" aria-hidden="true">
-            <div class="market-graphic"></div>
-          </div>
+          <div class="market-visual" aria-hidden="true"></div>
 
           <div class="market-copy">
             <h2>The Next Bear Market Could Be Closer Than You Think</h2>
@@ -201,22 +200,6 @@
       </main>
 
       <footer class="site-footer">
-        <div class="footer-top">
-          <div class="footer-nav">
-            <a href="#">Home</a>
-            <a href="#">Our Approach</a>
-            <a href="#">Services</a>
-            <a href="#">Resources</a>
-            <a href="#">About Us</a>
-            <a href="#">Contact</a>
-          </div>
-
-          <div class="socials" aria-label="Social media links">
-            <a href="#" aria-label="Facebook">f</a>
-            <a href="#" aria-label="LinkedIn">in</a>
-          </div>
-        </div>
-
         <div class="footer-bottom">
           <div>
             <p>
@@ -230,5 +213,21 @@
         </div>
       </footer>
     </div>
+    <script>
+      (function () {
+        var toggle = document.querySelector(".menu-toggle");
+        var nav = document.getElementById("main-nav");
+        if (!toggle || !nav) return;
+
+        toggle.addEventListener("click", function () {
+          var isOpen = nav.classList.toggle("is-open");
+          toggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+          toggle.setAttribute(
+            "aria-label",
+            isOpen ? "Close navigation menu" : "Open navigation menu"
+          );
+        });
+      })();
+    </script>
   </body>
 </html>
