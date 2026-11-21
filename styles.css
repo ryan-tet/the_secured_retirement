@@ -227,7 +227,7 @@ select {
 .hero h1 {
   margin: 0;
   font-family: var(--display-font);
-  font-size: clamp(3rem, 3vw, 5rem);
+  font-size: clamp(3rem, 3vw, 49px);
   line-height: 0.82;
   letter-spacing: normal;
   font-weight: 700;
