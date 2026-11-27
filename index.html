@@ -48,7 +48,7 @@
           <a href="#">Contact</a>
         </nav>
 
-        <button class="btn btn-primary btn-small" type="button">Schedule a Free Consultation</button>
+        <a class="btn btn-primary btn-small" href="#lead-card">Schedule a Free Consultation</a>
       </header>
 
       <main>
@@ -62,12 +62,12 @@
               certainly impact your hard-earned savings. The good news: There are strategies to help
               protect your retirement and keep your future on track.
             </p>
-            <button class="btn btn-primary btn-cta" type="button">
+            <a class="btn btn-primary btn-cta" href="#lead-card">
               <span class="btn-icon" aria-hidden="true">
                 <svg viewBox="0 0 24 24"><path d="M7 4h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Zm1 4h8M8 15h6"/></svg>
               </span>
               Schedule Your Free Consultation
-            </button>
+            </a>
           </div>
         </section>
 
@@ -133,42 +133,10 @@
             </p>
           </div>
 
-          <aside class="lead-card" aria-label="Free retirement protection plan">
-            <h3>Get Your Free Retirement Protection Plan</h3>
-            <p>
-              Take the first step toward a more secure future. Fill out the form below and we’ll
-              contact you for a no-obligation consultation.
-            </p>
-            <form class="consultation-form">
-              <label>
-                <span>Full Name</span>
-                <input type="text" name="name" placeholder="" />
-              </label>
-              <label>
-                <span>Email Address</span>
-                <input type="email" name="email" placeholder="" />
-              </label>
-              <label>
-                <span>Phone Number</span>
-                <input type="tel" name="phone" placeholder="" />
-              </label>
-              <label>
-                <span>Are you currently retired?</span>
-                <select name="retired">
-                  <option value="" selected disabled>Please select</option>
-                  <option>Yes</option>
-                  <option>No</option>
-                </select>
-              </label>
-              <button class="btn btn-primary btn-form" type="submit">
-                <span class="btn-icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24"><path d="M7 4h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Zm1 4h8M8 15h6"/></svg>
-                </span>
-                Request Your Consultation
-              </button>
-            </form>
-            <small>Your information is secure and will never be shared.</small>
-          </aside>
+          <!-- Calendly inline widget begin -->
+          <div id="lead-card" class="calendly-inline-widget" data-url="https://calendly.com/myfrsadvisors/drop-exit-strategy-1-on-1?hide_gdpr_banner=1" style="min-width:320px;height:700px;"></div>
+          <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+          <!-- Calendly inline widget end -->
         </section>
 
         <section class="contact-banner" aria-label="Phone and consultation callout">
@@ -180,22 +148,10 @@
             </p>
           </div>
 
-          <div class="banner-call">
+          <a class="banner-call" href="tel:1352550123">
             <span class="call-label">Call Today</span>
-            <a href="tel:1352550123">(352) 555-0123</a>
-          </div>
-
-          <div class="banner-cta">
-            <span class="mini-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><path d="M8 3h8a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Zm1 3h6M9 17h6"/></svg>
-            </span>
-            <div>
-              <span class="mini-title">Schedule A Free Consultation</span>
-              <span class="mini-sub">It only takes a few minutes.</span>
-            </div>
-            <button class="btn btn-primary btn-arrow" type="button">Get Started</button>
-          </div>
-
+            <span class="banner-phone">(352) 555-0123</span>
+          </a>
         </section>
       </main>
 

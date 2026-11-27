@@ -452,7 +452,7 @@ select {
 .contact-banner {
   position: relative;
   display: grid;
-  grid-template-columns: 1.7fr auto 1.1fr;
+  grid-template-columns: 1fr auto;
   align-items: center;
   gap: 1.1rem;
   background: rgba(255, 255, 255, 0.42);
@@ -486,11 +486,14 @@ select {
 .banner-call {
   display: flex;
   align-items: center;
+  justify-content: center;
+  justify-self: end;
   gap: 0.75rem;
   padding: 0.8rem 1rem;
   background: rgba(255, 255, 255, 0.35);
   border-radius: 0.8rem;
   border: 1px solid rgba(12, 35, 64, 0.06);
+  text-align: center;
 }
 
 .call-label {
@@ -500,7 +503,8 @@ select {
   font-weight: 700;
 }
 
-.banner-call a {
+.banner-call a,
+.banner-call .banner-phone {
   color: var(--navy);
   font-size: 1.15rem;
   font-weight: 800;
@@ -574,6 +578,10 @@ select {
   text-align: left;
 }
 
+.footer-bottom > div:first-child p {
+  text-align: left;
+}
+
 .footer-bottom p:last-child {
   text-align: right;
   font-style: italic;
@@ -593,12 +601,21 @@ select {
 
   .market-visual {
     min-height: 220px;
+    background: url("assets/market_bear_land.jpg") 60% 55% / cover no-repeat;
   }
 
   .contact-banner {
     grid-template-columns: 1fr;
     gap: 1.2rem;
     text-align: center;
+  }
+
+  .banner-copy,
+  .banner-copy p,
+  .banner-call {
+    width: 100%;
+    max-width: 100%;
+    justify-self: stretch;
   }
 
   .banner-cta {
