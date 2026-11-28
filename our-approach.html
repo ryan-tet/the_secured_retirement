@@ -8,7 +8,7 @@
       content="Explore a thoughtful retirement protection approach, from principal protection and income planning to tax efficiency and long-term growth."
     />
     <meta name="theme-color" content="#0F233C" />
-    <title>Our Approach | Meridian Retirement Partners</title>
+    <title>Our Approach | The Secured Retirement</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -54,10 +54,6 @@
         font-size: 18px;
         line-height: 1.65;
         -webkit-font-smoothing: antialiased;
-      }
-
-      body:has(dialog[open]) {
-        overflow: hidden;
       }
 
       .topbar {
@@ -235,7 +231,7 @@
       .hero h1 {
         max-width: 670px;
         margin-bottom: 1.25rem;
-        font-size: clamp(2.45rem, 4.7vw, 4.3rem);
+        font-size: clamp(2rem, 3vw, 2.75rem);
         letter-spacing: -0.045em;
         line-height: 1.06;
       }
@@ -330,7 +326,7 @@
 
       .scenario-list {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(3, minmax(0, 1fr));
         gap: 0.25rem;
         margin-bottom: 1.25rem;
         padding: 0.25rem;
@@ -339,6 +335,7 @@
       }
 
       .scenario-button {
+        min-width: 0;
         min-height: 42px;
         padding: 0.5rem 0.35rem;
         border: 1px solid transparent;
@@ -403,14 +400,16 @@
 
       .chart-legend {
         display: flex;
+        flex-wrap: wrap;
         align-items: center;
         justify-content: space-between;
-        gap: 0.75rem;
+        gap: 0;
         padding: 0 0.25rem;
       }
 
       .legend-item {
         display: inline-flex;
+        flex: 0 0 auto;
         align-items: center;
         gap: 0.4rem;
         color: #334155;
@@ -534,7 +533,6 @@
       .trough-value {
         display: block;
         color: var(--ink);
-        font-family: var(--serif);
         font-size: 1.08rem;
         font-weight: 700;
         line-height: 1.3;
@@ -600,7 +598,9 @@
       }
 
       .pillar-card {
+        display: flex;
         grid-column: span 2;
+        flex-direction: column;
         padding: 1.55rem;
         border: 1px solid var(--border);
         border-radius: 0.75rem;
@@ -648,6 +648,7 @@
       }
 
       .pillar-card details {
+        margin-top: auto;
         padding-top: 0.8rem;
         border-top: 1px solid var(--border);
       }
@@ -834,141 +835,6 @@
         font-weight: 500;
       }
 
-      dialog {
-        width: min(480px, calc(100% - 2rem));
-        max-width: none;
-        max-height: min(90vh, 760px);
-        padding: 0;
-        overflow: auto;
-        border: 1px solid var(--border);
-        border-radius: 0.9rem;
-        background: var(--white);
-        color: var(--ink);
-        box-shadow: 0 25px 90px rgba(2, 12, 27, 0.35);
-      }
-
-      dialog::backdrop {
-        background: rgba(6, 20, 36, 0.72);
-        backdrop-filter: blur(4px);
-      }
-
-      .modal-content {
-        padding: 1.8rem;
-      }
-
-      .modal-topline {
-        display: flex;
-        align-items: flex-start;
-        justify-content: space-between;
-        gap: 1rem;
-        margin-bottom: 1.35rem;
-      }
-
-      .modal-topline .section-kicker {
-        margin-bottom: 0.35rem;
-      }
-
-      .modal-topline h2 {
-        margin: 0;
-        color: var(--navy);
-        font-family: var(--serif);
-        font-size: 1.7rem;
-        line-height: 1.2;
-      }
-
-      .modal-close {
-        display: grid;
-        width: 38px;
-        height: 38px;
-        flex: 0 0 auto;
-        place-items: center;
-        border: 1px solid var(--border);
-        border-radius: 50%;
-        background: var(--white);
-        color: var(--body);
-        cursor: pointer;
-        font-size: 1.25rem;
-        line-height: 1;
-      }
-
-      .modal-intro {
-        margin-bottom: 1.15rem;
-        color: var(--body);
-        font-size: 0.875rem;
-      }
-
-      .form-fields {
-        display: grid;
-        gap: 0.85rem;
-      }
-
-      .form-fields label {
-        display: grid;
-        gap: 0.32rem;
-        color: #26374b;
-        font-size: 0.875rem;
-        font-weight: 600;
-      }
-
-      .form-fields input,
-      .form-fields select {
-        width: 100%;
-        min-height: 44px;
-        padding: 0.65rem 0.75rem;
-        border: 1px solid #cbd5e1;
-        border-radius: 0.4rem;
-        background: #fff;
-        color: var(--ink);
-        font-size: 0.875rem;
-      }
-
-      .form-note {
-        margin: 0.85rem 0 0;
-        color: var(--muted);
-        font-size: 0.875rem;
-        line-height: 1.5;
-      }
-
-      .form-submit {
-        width: 100%;
-        margin-top: 1.1rem;
-      }
-
-      .confirmation {
-        padding: 1rem 0 0.5rem;
-        text-align: center;
-      }
-
-      .confirmation-mark {
-        display: grid;
-        width: 56px;
-        height: 56px;
-        margin: 0 auto 1rem;
-        place-items: center;
-        border-radius: 50%;
-        background: #e8f5ee;
-        color: var(--green);
-        font-size: 1.6rem;
-        font-weight: 700;
-      }
-
-      .confirmation h3 {
-        margin-bottom: 0.5rem;
-        color: var(--navy);
-        font-family: var(--serif);
-        font-size: 1.5rem;
-      }
-
-      .confirmation p {
-        margin-bottom: 1.2rem;
-        color: var(--body);
-        font-size: 0.875rem;
-      }
-
-      [hidden] {
-        display: none !important;
-      }
-
       @media (max-width: 1020px) {
         .site-header {
           gap: 1rem;
@@ -997,18 +863,20 @@
 
         .hero-inner {
           min-height: 0;
-          grid-template-columns: 1fr;
+          grid-template-columns: minmax(0, 1fr);
           gap: 2.5rem;
-          padding-top: 4rem;
-          padding-bottom: 4rem;
+          padding-top: 2rem;
+          padding-bottom: 2rem;
         }
 
         .hero-copy {
           max-width: 680px;
+          min-width: 0;
         }
 
         .simulator {
           width: min(600px, 100%);
+          min-width: 0;
           justify-self: center;
         }
 
@@ -1064,7 +932,7 @@
         }
 
         .hero h1 {
-          font-size: clamp(2.25rem, 11vw, 3rem);
+          font-size: clamp(1.75rem, 7vw, 2.1rem);
         }
 
         .hero-description {
@@ -1171,7 +1039,7 @@
         <a href="about.html">About</a>
       </nav>
 
-      <a class="btn btn-primary btn-small" href="#consultation-dialog" data-open-consultation>
+      <a class="btn btn-primary btn-small" href="index.html#lead-card">
         Schedule a Free Consultation
       </a>
     </header>
@@ -1180,18 +1048,18 @@
       <section class="hero" id="home" aria-labelledby="hero-title">
         <div class="hero-inner">
           <div class="hero-copy">
-            <p class="eyebrow">RETIREMENT PROTECTION STRATEGY</p>
-            <h1 id="hero-title">DON'T LET ANOTHER BEAR MARKET DESTROY YOUR RETIREMENT DREAMS</h1>
-            <p class="hero-subtitle">Protect Your Retirement Accounts From the Next Market Downturn</p>
+            <p class="eyebrow">A THOUGHTFUL APPROACH TO RETIREMENT</p>
+            <h1 id="hero-title">Build a Retirement Strategy for the Road Ahead</h1>
+            <p class="hero-subtitle">Bring protection, income, and long-term goals into one clear plan.</p>
             <p class="hero-description">
-              The stock market is unpredictable. A bear market can happen anytime — and it can
-              certainly impact your hard-earned savings. The good news: There are strategies to help
-              protect your retirement and keep your future on track.
+              Markets move through cycles, but your retirement plan can be built around what matters
+              most to you. Our approach brings together protection, income planning, tax-aware
+              strategies, and growth to help balance opportunity with risk at every stage.
             </p>
-            <button class="button" type="button" data-open-consultation>
+            <a class="button" href="index.html#lead-card">
               Schedule Your Free Consultation
               <span aria-hidden="true">→</span>
-            </button>
+            </a>
             <p class="trust-strip">
               <span>Fiduciary Standard</span>
               <span aria-hidden="true">•</span>
@@ -1382,7 +1250,16 @@
             <article class="pillar-card">
               <span class="pillar-icon" aria-hidden="true">
                 <svg viewBox="0 0 24 24">
-                  <path d="M12 3v18M17 7.5c0-1.4-1.8-2.5-4.5-2.5S8 6.1 8 7.5 9.8 10 12.5 10 17 11.1 17 12.5 15.2 15 12.5 15 8 13.9 8 12.5" />
+                  <text
+                    x="12"
+                    y="18"
+                    text-anchor="middle"
+                    fill="currentColor"
+                    stroke="none"
+                    font-family="Inter, Arial, sans-serif"
+                    font-size="18"
+                    font-weight="600"
+                  >$</text>
                 </svg>
               </span>
               <h3>Tax-Efficient Solutions</h3>
@@ -1493,10 +1370,10 @@
               The right strategy can help you weather the storm and stay on course for your
               retirement goals.
             </p>
-            <button class="button" type="button" data-open-consultation>
+            <a class="button" href="index.html#lead-card">
               Schedule Your Free Consultation
               <span aria-hidden="true">→</span>
-            </button>
+            </a>
           </div>
         </div>
       </section>
@@ -1516,67 +1393,8 @@
     </footer>
   </div>
 
-    <dialog id="consultation-dialog" aria-labelledby="consultation-title">
-      <div class="modal-content">
-        <div class="modal-topline">
-          <div>
-            <p class="section-kicker">A CONVERSATION, NOT A COMMITMENT</p>
-            <h2 id="consultation-title">Schedule Your Free Consultation</h2>
-          </div>
-          <button class="modal-close" type="button" aria-label="Close dialog" data-close-dialog>×</button>
-        </div>
-
-        <form id="consultation-form">
-          <p class="modal-intro">
-            Share a few details and we’ll be in touch to find a time that works for you.
-          </p>
-          <div class="form-fields">
-            <label>
-              Full Name
-              <input name="name" autocomplete="name" required />
-            </label>
-            <label>
-              Email
-              <input name="email" type="email" autocomplete="email" required />
-            </label>
-            <label>
-              Phone
-              <input name="phone" type="tel" autocomplete="tel" required />
-            </label>
-            <label>
-              Estimated Retirement Timeline
-              <select name="timeline" required>
-                <option value="" selected disabled>Select your timeline</option>
-                <option>&lt; 2 Years</option>
-                <option>2–5 Years</option>
-                <option>5–10 Years</option>
-                <option>Already Retired</option>
-              </select>
-            </label>
-          </div>
-          <p class="form-note">
-            Your information is only used to respond to your consultation request.
-          </p>
-          <button class="button form-submit" type="submit">Request My Consultation</button>
-        </form>
-
-        <div class="confirmation" id="consultation-confirmation" role="status" hidden>
-          <span class="confirmation-mark" aria-hidden="true">✓</span>
-          <h3>Thank you for reaching out.</h3>
-          <p>
-            This page doesn’t transmit your information or book an appointment. Please contact
-            Meridian directly to complete your request. There’s no obligation.
-          </p>
-          <button class="button" type="button" data-close-dialog>Close</button>
-        </div>
-      </div>
-    </dialog>
-
     <script>
       (function () {
-        var dialog = document.getElementById("consultation-dialog");
-        var form = document.getElementById("consultation-form");
-        var confirmation = document.getElementById("consultation-confirmation");
         var slider = document.getElementById("portfolio-slider");
         var portfolioValues = [];
         for (var amount = 25000; amount <= 150000; amount += 5000) {
@@ -1600,7 +1418,8 @@
           notation: "compact",
           maximumFractionDigits: 1
         });
-        var chartX = [76, 190, 304, 418, 532];
+        var chartSvg = document.querySelector(".performance-chart");
+        var chartX = [];
         var chartTop = 18;
         var chartBottom = 207;
         var chartMaximum = 1.2;
@@ -1622,7 +1441,23 @@
             0.2,
             Math.min(0.6, Math.floor((Math.min.apply(null, traditionalPath) - 0.001) * 5) / 5)
           );
+          var renderedWidth = chartSvg.getBoundingClientRect().width;
+          var scale = renderedWidth / chartSvg.viewBox.baseVal.width;
+          var chartFontSize = 14 / scale;
+          var plotStart = 52 / scale;
+          var gridEnd = (renderedWidth - 14) / scale;
+          var plotEnd = gridEnd;
+          var yearLabels = chartSvg.querySelectorAll(".chart-year-label text");
           var chartHeight = chartBottom - chartTop;
+
+          chartX = [];
+          for (var pointIndex = 0; pointIndex < 5; pointIndex += 1) {
+            chartX.push(plotStart + ((plotEnd - plotStart) * pointIndex) / 4);
+          }
+          chartSvg.querySelector(".chart-year-label").style.fontSize = chartFontSize + "px";
+          yearLabels.forEach(function (label, index) {
+            label.setAttribute("x", chartX[index].toFixed(2));
+          });
 
           document.getElementById("portfolio-value").textContent = currency.format(startingValue);
           slider.setAttribute("aria-valuetext", currency.format(startingValue));
@@ -1638,7 +1473,8 @@
 
           function linePath(values) {
             return values.map(function (value, index) {
-              return (index === 0 ? "M " : "L ") + chartX[index] + " " + chartY(value).toFixed(2);
+              return (index === 0 ? "M " : "L ") + chartX[index].toFixed(2) + " " +
+                chartY(value).toFixed(2);
             }).join(" ");
           }
 
@@ -1648,8 +1484,8 @@
           document.getElementById("traditional-line").setAttribute("d", traditionalPathData);
           document.getElementById("protected-area").setAttribute(
             "d",
-            protectedPathData + " L " + chartX[chartX.length - 1] + " " + chartBottom +
-              " L " + chartX[0] + " " + chartBottom + " Z"
+            protectedPathData + " L " + chartX[chartX.length - 1].toFixed(2) + " " + chartBottom +
+              " L " + chartX[0].toFixed(2) + " " + chartBottom + " Z"
           );
 
           var gridMarkup = "";
@@ -1660,8 +1496,10 @@
             var isBaseline = Math.abs(tickValue - chartMinimum) < 0.001;
             gridMarkup +=
               '<line class="chart-gridline' + (isBaseline ? " baseline" : "") +
-              '" x1="76" y1="' + tickY.toFixed(2) + '" x2="548" y2="' + tickY.toFixed(2) + '"></line>' +
-              '<text class="chart-axis-label" x="64" y="' + (tickY + 4).toFixed(2) +
+              '" x1="' + chartX[0].toFixed(2) + '" y1="' + tickY.toFixed(2) +
+              '" x2="' + gridEnd.toFixed(2) + '" y2="' + tickY.toFixed(2) + '"></line>' +
+              '<text class="chart-axis-label" style="font-size:' + chartFontSize.toFixed(2) +
+              'px" x="' + (chartX[0] - 12 / scale).toFixed(2) + '" y="' + (tickY + 4).toFixed(2) +
               '" text-anchor="end">' + compactCurrency.format(startingValue * tickValue) + "</text>";
           }
           document.getElementById("chart-grid").innerHTML = gridMarkup;
@@ -1691,29 +1529,8 @@
         });
 
         slider.addEventListener("input", updateSimulator);
-
-        document.querySelectorAll("[data-open-consultation]").forEach(function (button) {
-          button.addEventListener("click", function (event) {
-            event.preventDefault();
-            form.hidden = false;
-            confirmation.hidden = true;
-            form.reset();
-            dialog.showModal();
-          });
-        });
-
-        document.querySelectorAll("[data-close-dialog]").forEach(function (button) {
-          button.addEventListener("click", function () {
-            dialog.close();
-          });
-        });
-
-        form.addEventListener("submit", function (event) {
-          event.preventDefault();
-          if (!form.reportValidity()) return;
-          form.hidden = true;
-          confirmation.hidden = false;
-          confirmation.querySelector("button").focus();
+        window.addEventListener("resize", function () {
+          window.requestAnimationFrame(updateSimulator);
         });
 
         document.querySelector(".menu-toggle").addEventListener("click", function (buttonEvent) {
