@@ -1,0 +1,1741 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Explore a thoughtful retirement protection approach, from principal protection and income planning to tax efficiency and long-term growth."
+    />
+    <meta name="theme-color" content="#0F233C" />
+    <title>Our Approach | Meridian Retirement Partners</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      :root {
+        color-scheme: light;
+        --navy: #0f233c;
+        --slate-navy: #1b365d;
+        --canvas: #f8fafc;
+        --white: #ffffff;
+        --green: #1e6b52;
+        --gold: #c59b27;
+        --gold-hover: #b0881e;
+        --ink: #0f172a;
+        --body: #475569;
+        --muted: #94a3b8;
+        --border: #e2e8f0;
+        --serif: "Playfair Display", Georgia, serif;
+        --sans: "Inter", Arial, sans-serif;
+        --shadow: 0 18px 44px rgba(15, 35, 60, 0.1);
+      }
+
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 6rem;
+      }
+
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--ink);
+        font-family: var(--sans);
+        font-size: 18px;
+        line-height: 1.65;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      body:has(dialog[open]) {
+        overflow: hidden;
+      }
+
+      .topbar {
+        --navy: #112d4d;
+        --gold: #c99749;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      button,
+      input,
+      select {
+        font: inherit;
+      }
+
+      button,
+      a,
+      summary {
+        -webkit-tap-highlight-color: transparent;
+      }
+
+      button:focus-visible,
+      a:focus-visible,
+      input:focus-visible,
+      select:focus-visible,
+      summary:focus-visible {
+        outline: 3px solid #e8c65c;
+        outline-offset: 3px;
+      }
+
+      .skip-link {
+        position: fixed;
+        z-index: 20;
+        top: 0.75rem;
+        left: 0.75rem;
+        padding: 0.65rem 1rem;
+        transform: translateY(-160%);
+        border-radius: 0.4rem;
+        background: var(--white);
+        color: var(--navy);
+      }
+
+      .skip-link:focus {
+        transform: translateY(0);
+      }
+
+      .site-header {
+        position: sticky;
+        z-index: 10;
+        top: 0;
+        display: flex;
+        min-height: 78px;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1.5rem;
+        padding: 0.75rem clamp(1.25rem, 5vw, 4.5rem);
+        border-bottom: 1px solid rgba(226, 232, 240, 0.85);
+        background: rgba(255, 255, 255, 0.9);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+      }
+
+      .brand-mark {
+        display: grid;
+        width: 40px;
+        height: 40px;
+        flex: 0 0 auto;
+        place-items: center;
+        border-radius: 12px;
+        background: var(--navy);
+        color: #e6bd4b;
+      }
+
+      .brand-mark svg {
+        width: 25px;
+        height: 25px;
+        fill: none;
+        stroke: currentColor;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.7;
+      }
+
+      .header-cta,
+      .button {
+        display: inline-flex;
+        min-height: 48px;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        padding: 0.75rem 1.1rem;
+        border: 1px solid transparent;
+        border-radius: 0.45rem;
+        background: var(--gold);
+        color: var(--navy);
+        cursor: pointer;
+        font-size: 0.875rem;
+        font-weight: 700;
+        line-height: 1.25;
+        text-align: center;
+        transition: background 160ms ease, transform 160ms ease, box-shadow 160ms ease;
+      }
+
+      .header-cta {
+        min-height: 44px;
+        padding: 0.65rem 0.9rem;
+        font-size: 0.875rem;
+      }
+
+      .header-cta:hover,
+      .button:hover {
+        transform: translateY(-1px);
+        background: var(--gold-hover);
+        box-shadow: 0 8px 18px rgba(15, 35, 60, 0.16);
+      }
+
+      .hero {
+        overflow: hidden;
+        background:
+          radial-gradient(ellipse at 82% 18%, rgba(40, 76, 115, 0.52), transparent 36%),
+          var(--navy);
+        color: var(--white);
+      }
+
+      .hero-inner {
+        display: grid;
+        width: min(1200px, 100%);
+        min-height: 630px;
+        grid-template-columns: minmax(0, 1.08fr) minmax(360px, 0.92fr);
+        align-items: center;
+        gap: clamp(2.5rem, 6vw, 5.5rem);
+        margin: 0 auto;
+        padding: clamp(3.5rem, 7vw, 6rem) clamp(1.5rem, 5vw, 4rem);
+      }
+
+      .hero-copy {
+        max-width: 610px;
+      }
+
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.55rem;
+        margin: 0 0 1.2rem;
+        color: #e6c45f;
+        font-size: 0.875rem;
+        font-weight: 700;
+        letter-spacing: 0.14em;
+        line-height: 1.4;
+      }
+
+      .eyebrow::before {
+        width: 22px;
+        height: 1px;
+        background: currentColor;
+        content: "";
+      }
+
+      h1,
+      h2,
+      h3,
+      p {
+        margin-top: 0;
+      }
+
+      h1,
+      h2 {
+        font-family: var(--serif);
+        font-weight: 600;
+      }
+
+      .hero h1 {
+        max-width: 670px;
+        margin-bottom: 1.25rem;
+        font-size: clamp(2.45rem, 4.7vw, 4.3rem);
+        letter-spacing: -0.045em;
+        line-height: 1.06;
+      }
+
+      .hero-subtitle {
+        margin-bottom: 0.85rem;
+        color: #f2f6fa;
+        font-size: clamp(1.05rem, 1.7vw, 1.28rem);
+        font-weight: 600;
+        line-height: 1.45;
+      }
+
+      .hero-description {
+        max-width: 570px;
+        margin-bottom: 1.55rem;
+        color: #cad5e1;
+        font-size: 1rem;
+        line-height: 1.8;
+      }
+
+      .trust-strip {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem 1rem;
+        margin: 1.1rem 0 0;
+        color: #becbd9;
+        font-size: 0.875rem;
+        line-height: 1.6;
+      }
+
+      .simulator {
+        padding: clamp(1.25rem, 3vw, 1.8rem);
+        border: 1px solid rgba(255, 255, 255, 0.13);
+        border-radius: 1rem;
+        background: linear-gradient(145deg, rgba(33, 65, 103, 0.97), rgba(20, 46, 77, 0.98));
+        box-shadow: 0 24px 60px rgba(0, 0, 0, 0.2);
+      }
+
+      .simulator-heading {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 1rem;
+        margin-bottom: 1.25rem;
+      }
+
+      .simulator-heading h2 {
+        margin: 0;
+        font-family: var(--sans);
+        font-size: 1.1rem;
+        font-weight: 600;
+        letter-spacing: -0.02em;
+      }
+
+      .simulator-heading p {
+        margin: 0.2rem 0 0;
+        color: #b8c7d8;
+        font-size: 0.875rem;
+      }
+
+      .simulator-icon {
+        display: grid;
+        width: 38px;
+        height: 38px;
+        flex: 0 0 auto;
+        place-items: center;
+        border-radius: 0.65rem;
+        background: rgba(255, 255, 255, 0.09);
+        color: #e6c45f;
+      }
+
+      .simulator-icon svg,
+      .scenario-icon svg,
+      .pillar-icon svg {
+        width: 22px;
+        height: 22px;
+        fill: none;
+        stroke: currentColor;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.7;
+      }
+
+      .scenario-label,
+      .slider-label {
+        display: block;
+        margin-bottom: 0.55rem;
+        color: #d7e0e9;
+        font-size: 0.875rem;
+        font-weight: 600;
+      }
+
+      .scenario-list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.25rem;
+        margin-bottom: 1.25rem;
+        padding: 0.25rem;
+        border-radius: 0.65rem;
+        background: #eaf0f6;
+      }
+
+      .scenario-button {
+        min-height: 42px;
+        padding: 0.5rem 0.35rem;
+        border: 1px solid transparent;
+        border-radius: 0.4rem;
+        background: transparent;
+        color: #475569;
+        cursor: pointer;
+        font-size: 0.875rem;
+        font-weight: 600;
+        line-height: 1.25;
+        transition: border-color 160ms ease, background 160ms ease, color 160ms ease;
+      }
+
+      .scenario-button:hover,
+      .scenario-button[aria-pressed="true"] {
+        border-color: #e2e8f0;
+        background: #fff;
+        color: var(--navy);
+      }
+
+      .scenario-button[aria-pressed="true"] {
+        box-shadow: 0 1px 3px rgba(15, 35, 60, 0.12);
+      }
+
+      .slider-row {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: 1rem;
+      }
+
+      .portfolio-value {
+        color: #fff;
+        font-size: 1.05rem;
+        font-weight: 700;
+        font-variant-numeric: tabular-nums;
+      }
+
+      input[type="range"] {
+        width: 100%;
+        height: 5px;
+        margin: 0.3rem 0 0.45rem;
+        accent-color: #e4c45f;
+        cursor: pointer;
+      }
+
+      .range-ends {
+        display: flex;
+        justify-content: space-between;
+        color: #aebed0;
+        font-size: 0.875rem;
+      }
+
+      .chart-panel {
+        margin-top: 1rem;
+        padding: 0.85rem 0.65rem 0.55rem;
+        border: 1px solid #dfe7ef;
+        border-radius: 0.75rem;
+        background: #f8fafc;
+        color: var(--ink);
+      }
+
+      .chart-legend {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0.75rem;
+        padding: 0 0.25rem;
+      }
+
+      .legend-item {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+        color: #334155;
+        font-size: 0.875rem;
+        line-height: 1.3;
+        white-space: nowrap;
+      }
+
+      .legend-item:first-child {
+        font-weight: 700;
+      }
+
+      .legend-swatch {
+        width: 10px;
+        height: 10px;
+        flex: 0 0 auto;
+        border-radius: 50%;
+        background: #1e6b52;
+      }
+
+      .legend-swatch.traditional {
+        background: #f45b79;
+      }
+
+      .performance-chart {
+        display: block;
+        width: 100%;
+        height: auto;
+        overflow: visible;
+        margin-top: 0.4rem;
+      }
+
+      .chart-gridline {
+        stroke: #d7e1eb;
+        stroke-dasharray: 4 5;
+        stroke-width: 1;
+      }
+
+      .chart-gridline.baseline {
+        stroke: #b7c5d4;
+        stroke-dasharray: none;
+      }
+
+      .chart-axis-label,
+      .chart-year-label {
+        fill: #8192a8;
+        font-family: var(--sans);
+        font-size: 14px;
+      }
+
+      .chart-year-label {
+        font-size: 14px;
+      }
+
+      .protected-area {
+        fill: url(#protected-gradient);
+      }
+
+      .protected-line {
+        fill: none;
+        stroke: #1e6b52;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 4;
+      }
+
+      .traditional-line {
+        fill: none;
+        stroke: #f52350;
+        stroke-dasharray: 7 6;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 3.5;
+      }
+
+      .protected-point {
+        fill: #1e6b52;
+        stroke: #fff;
+        stroke-width: 3;
+      }
+
+      .traditional-point {
+        fill: #f52350;
+        stroke: #fff;
+        stroke-width: 3;
+      }
+
+      .trough-summary {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.7rem;
+        margin-top: 0.75rem;
+      }
+
+      .trough-card {
+        min-width: 0;
+        padding: 0.75rem;
+        border: 1px solid #c5ded3;
+        border-radius: 0.65rem;
+        background: #f0f8f4;
+      }
+
+      .trough-card.traditional {
+        border-color: #f4c9d1;
+        background: #fff5f6;
+      }
+
+      .trough-label {
+        display: block;
+        margin-bottom: 0.2rem;
+        color: #17533f;
+        font-size: 0.875rem;
+        line-height: 1.35;
+      }
+
+      .trough-card.traditional .trough-label,
+      .trough-card.traditional .trough-detail {
+        color: #bc193e;
+      }
+
+      .trough-value {
+        display: block;
+        color: var(--ink);
+        font-family: var(--serif);
+        font-size: 1.08rem;
+        font-weight: 700;
+        line-height: 1.3;
+        font-variant-numeric: tabular-nums;
+      }
+
+      .trough-detail {
+        display: block;
+        color: #17533f;
+        font-size: 0.875rem;
+        line-height: 1.4;
+      }
+
+      .simulator-note {
+        margin: 0.75rem 0 0;
+        color: #aebed0;
+        font-size: 11px;
+        line-height: 1.5;
+      }
+
+      .section {
+        padding: clamp(4rem, 8vw, 6.8rem) clamp(1.5rem, 5vw, 4rem);
+      }
+
+      .section-inner {
+        width: min(1120px, 100%);
+        margin: 0 auto;
+      }
+
+      .section-heading {
+        max-width: 680px;
+        margin: 0 auto 2.5rem;
+        text-align: center;
+      }
+
+      .section-kicker {
+        margin-bottom: 0.7rem;
+        color: var(--green);
+        font-size: 0.875rem;
+        font-weight: 700;
+        letter-spacing: 0.15em;
+      }
+
+      .section-heading h2,
+      .market-heading h2 {
+        margin-bottom: 0.7rem;
+        color: var(--navy);
+        font-size: clamp(2rem, 4vw, 3rem);
+        letter-spacing: -0.04em;
+        line-height: 1.14;
+      }
+
+      .section-heading > p:last-child {
+        margin-bottom: 0;
+        color: var(--body);
+        font-size: 1rem;
+      }
+
+      .pillar-grid {
+        display: grid;
+        grid-template-columns: repeat(6, minmax(0, 1fr));
+        gap: 1rem;
+      }
+
+      .pillar-card {
+        grid-column: span 2;
+        padding: 1.55rem;
+        border: 1px solid var(--border);
+        border-radius: 0.75rem;
+        background: var(--white);
+        box-shadow: 0 4px 14px rgba(15, 35, 60, 0.035);
+        transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+      }
+
+      .pillar-card:nth-child(4) {
+        grid-column: 2 / span 2;
+      }
+
+      .pillar-card:hover {
+        transform: translateY(-4px);
+        border-color: #cad6e3;
+        box-shadow: var(--shadow);
+      }
+
+      .pillar-icon {
+        display: grid;
+        width: 46px;
+        height: 46px;
+        margin-bottom: 1rem;
+        place-items: center;
+        border-radius: 0.7rem;
+        background: #edf5f1;
+        color: var(--green);
+      }
+
+      .pillar-card h3 {
+        margin-bottom: 0.55rem;
+        color: var(--navy);
+        font-family: var(--serif);
+        font-size: 1.3rem;
+        font-weight: 600;
+        line-height: 1.28;
+      }
+
+      .pillar-card > p {
+        min-height: 3.4em;
+        margin-bottom: 1.05rem;
+        color: var(--body);
+        font-size: 0.875rem;
+        line-height: 1.65;
+      }
+
+      .pillar-card details {
+        padding-top: 0.8rem;
+        border-top: 1px solid var(--border);
+      }
+
+      .pillar-card summary {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0.75rem;
+        color: var(--green);
+        cursor: pointer;
+        font-size: 0.875rem;
+        font-weight: 700;
+        list-style: none;
+      }
+
+      .pillar-card summary::-webkit-details-marker {
+        display: none;
+      }
+
+      .pillar-card summary::after {
+        color: var(--green);
+        content: "+";
+        font-size: 1.1rem;
+        line-height: 1;
+        transition: transform 160ms ease;
+      }
+
+      .pillar-card details[open] summary::after {
+        transform: rotate(45deg);
+      }
+
+      .pillar-card details p {
+        margin: 0.7rem 0 0;
+        color: var(--body);
+        font-size: 0.875rem;
+        line-height: 1.65;
+      }
+
+      .market-section {
+        display: block;
+        background:
+          radial-gradient(ellipse at 12% 0%, rgba(38, 72, 108, 0.4), transparent 38%),
+          var(--navy);
+        color: var(--white);
+      }
+
+      .market-heading {
+        max-width: 760px;
+        margin: 0 auto 2.35rem;
+        text-align: center;
+      }
+
+      .market-heading .section-kicker {
+        color: #e6c45f;
+      }
+
+      .market-heading h2 {
+        color: var(--white);
+      }
+
+      .market-heading > p:last-child {
+        margin: 0;
+        color: #c8d3df;
+        font-size: 1rem;
+        line-height: 1.75;
+      }
+
+      .reality-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+      }
+
+      .reality-card {
+        --reality-accent: #ff6b84;
+        --reality-icon-bg: #2a2035;
+        --reality-icon-border: #54243e;
+        display: flex;
+        min-height: 350px;
+        flex-direction: column;
+        padding: 1.6rem;
+        border: 1px solid rgba(226, 232, 240, 0.06);
+        border-radius: 0.95rem;
+        background: #142b46;
+      }
+
+      .reality-inflation {
+        --reality-accent: #ffd02f;
+        --reality-icon-bg: #302f2b;
+        --reality-icon-border: #5e5023;
+      }
+
+      .reality-correlation {
+        --reality-accent: #5cccf2;
+        --reality-icon-bg: #123954;
+        --reality-icon-border: #145576;
+      }
+
+      .reality-icon {
+        display: grid;
+        width: 48px;
+        height: 48px;
+        flex: 0 0 auto;
+        margin-bottom: 1.35rem;
+        place-items: center;
+        border: 1px solid var(--reality-icon-border);
+        border-radius: 0.8rem;
+        background: var(--reality-icon-bg);
+        color: var(--reality-accent);
+      }
+
+      .reality-icon svg {
+        width: 23px;
+        height: 23px;
+        fill: none;
+        stroke: currentColor;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.6;
+      }
+
+      .reality-card h3 {
+        margin-bottom: 0.75rem;
+        color: #f8fafc;
+        font-family: var(--serif);
+        font-size: 1.3rem;
+        font-weight: 700;
+        line-height: 1.16;
+      }
+
+      .reality-card p {
+        flex: 1;
+        margin: 0;
+        color: #bdcbd9;
+        font-size: 0.875rem;
+        line-height: 1.58;
+      }
+
+      .reality-downturn p strong {
+        color: #ffd02f;
+      }
+
+      .reality-stat {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 0.65rem;
+        margin-top: 1.45rem;
+        padding-top: 1rem;
+      }
+
+      .reality-stat span {
+        color: #a7b7c8;
+        font-size: 0.875rem;
+        line-height: 1.4;
+      }
+
+      .reality-stat strong {
+        color: var(--reality-accent);
+        font-size: 0.875rem;
+        font-weight: 700;
+        line-height: 1.35;
+        text-align: right;
+      }
+
+      .closing-callout {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 2rem;
+        margin-top: 1.3rem;
+        padding: 1.45rem 1.65rem;
+        border: 1px solid rgba(230, 196, 95, 0.28);
+        border-radius: 0.7rem;
+        background: rgba(255, 255, 255, 0.07);
+      }
+
+      .closing-callout p {
+        max-width: 640px;
+        margin: 0;
+        color: #f4f6f8;
+        font-size: 1rem;
+        font-weight: 500;
+      }
+
+      dialog {
+        width: min(480px, calc(100% - 2rem));
+        max-width: none;
+        max-height: min(90vh, 760px);
+        padding: 0;
+        overflow: auto;
+        border: 1px solid var(--border);
+        border-radius: 0.9rem;
+        background: var(--white);
+        color: var(--ink);
+        box-shadow: 0 25px 90px rgba(2, 12, 27, 0.35);
+      }
+
+      dialog::backdrop {
+        background: rgba(6, 20, 36, 0.72);
+        backdrop-filter: blur(4px);
+      }
+
+      .modal-content {
+        padding: 1.8rem;
+      }
+
+      .modal-topline {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 1rem;
+        margin-bottom: 1.35rem;
+      }
+
+      .modal-topline .section-kicker {
+        margin-bottom: 0.35rem;
+      }
+
+      .modal-topline h2 {
+        margin: 0;
+        color: var(--navy);
+        font-family: var(--serif);
+        font-size: 1.7rem;
+        line-height: 1.2;
+      }
+
+      .modal-close {
+        display: grid;
+        width: 38px;
+        height: 38px;
+        flex: 0 0 auto;
+        place-items: center;
+        border: 1px solid var(--border);
+        border-radius: 50%;
+        background: var(--white);
+        color: var(--body);
+        cursor: pointer;
+        font-size: 1.25rem;
+        line-height: 1;
+      }
+
+      .modal-intro {
+        margin-bottom: 1.15rem;
+        color: var(--body);
+        font-size: 0.875rem;
+      }
+
+      .form-fields {
+        display: grid;
+        gap: 0.85rem;
+      }
+
+      .form-fields label {
+        display: grid;
+        gap: 0.32rem;
+        color: #26374b;
+        font-size: 0.875rem;
+        font-weight: 600;
+      }
+
+      .form-fields input,
+      .form-fields select {
+        width: 100%;
+        min-height: 44px;
+        padding: 0.65rem 0.75rem;
+        border: 1px solid #cbd5e1;
+        border-radius: 0.4rem;
+        background: #fff;
+        color: var(--ink);
+        font-size: 0.875rem;
+      }
+
+      .form-note {
+        margin: 0.85rem 0 0;
+        color: var(--muted);
+        font-size: 0.875rem;
+        line-height: 1.5;
+      }
+
+      .form-submit {
+        width: 100%;
+        margin-top: 1.1rem;
+      }
+
+      .confirmation {
+        padding: 1rem 0 0.5rem;
+        text-align: center;
+      }
+
+      .confirmation-mark {
+        display: grid;
+        width: 56px;
+        height: 56px;
+        margin: 0 auto 1rem;
+        place-items: center;
+        border-radius: 50%;
+        background: #e8f5ee;
+        color: var(--green);
+        font-size: 1.6rem;
+        font-weight: 700;
+      }
+
+      .confirmation h3 {
+        margin-bottom: 0.5rem;
+        color: var(--navy);
+        font-family: var(--serif);
+        font-size: 1.5rem;
+      }
+
+      .confirmation p {
+        margin-bottom: 1.2rem;
+        color: var(--body);
+        font-size: 0.875rem;
+      }
+
+      [hidden] {
+        display: none !important;
+      }
+
+      @media (max-width: 1020px) {
+        .site-header {
+          gap: 1rem;
+          padding-right: 1.5rem;
+          padding-left: 1.5rem;
+        }
+
+        .hero-inner {
+          grid-template-columns: minmax(0, 1fr) minmax(340px, 0.95fr);
+          gap: 2.25rem;
+        }
+      }
+
+      @media (max-width: 800px) {
+        .site-header {
+          min-height: 70px;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          padding: 0.7rem 1.25rem;
+        }
+
+        .header-cta {
+          order: 1;
+          margin-left: auto;
+        }
+
+        .hero-inner {
+          min-height: 0;
+          grid-template-columns: 1fr;
+          gap: 2.5rem;
+          padding-top: 4rem;
+          padding-bottom: 4rem;
+        }
+
+        .hero-copy {
+          max-width: 680px;
+        }
+
+        .simulator {
+          width: min(600px, 100%);
+          justify-self: center;
+        }
+
+        .pillar-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .pillar-card,
+        .pillar-card:nth-child(4) {
+          grid-column: auto;
+        }
+
+        .pillar-card:last-child {
+          grid-column: 1 / -1;
+        }
+
+        .reality-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .reality-card {
+          min-height: 0;
+        }
+
+        .footer-inner {
+          flex-direction: column;
+          gap: 1rem;
+        }
+      }
+
+      @media (max-width: 540px) {
+        .site-header {
+          gap: 0.55rem;
+          padding-right: 0.9rem;
+          padding-left: 0.9rem;
+        }
+
+        .brand-mark {
+          width: 35px;
+          height: 35px;
+          border-radius: 10px;
+        }
+
+        .header-cta {
+          min-height: 40px;
+          max-width: 136px;
+          padding: 0.48rem 0.55rem;
+          font-size: 0.875rem;
+        }
+
+        .hero-inner {
+          padding: 3rem 1.2rem;
+        }
+
+        .hero h1 {
+          font-size: clamp(2.25rem, 11vw, 3rem);
+        }
+
+        .hero-description {
+          font-size: 1rem;
+        }
+
+        .trust-strip {
+          gap: 0.35rem 0.7rem;
+          font-size: 0.875rem;
+        }
+
+        .simulator {
+          padding: 1.15rem;
+        }
+
+        .scenario-button {
+          min-height: 46px;
+          font-size: 0.875rem;
+        }
+
+        .trough-summary {
+          grid-template-columns: 1fr;
+        }
+
+        .section {
+          padding: 3.6rem 1.15rem;
+        }
+
+        .pillar-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .pillar-card:last-child {
+          grid-column: auto;
+        }
+
+        .pillar-card > p {
+          min-height: 0;
+        }
+
+        .closing-callout {
+          align-items: stretch;
+          flex-direction: column;
+          gap: 1rem;
+          padding: 1.2rem;
+        }
+
+        .closing-callout .button {
+          width: 100%;
+        }
+
+        .footer-inner {
+          gap: 0.8rem;
+        }
+
+        .copyright {
+          white-space: normal;
+        }
+
+        .modal-content {
+          padding: 1.4rem;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+          scroll-behavior: auto !important;
+          transition-duration: 0.01ms !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+  <div class="page-shell">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <header class="topbar">
+      <a class="brand" href="index.html" aria-label="The Secured Retirement home">
+        <img
+          src="assets/The_Secured_Retirement.png"
+          alt="The Secured Retirement"
+          class="brand-logo"
+        />
+      </a>
+
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="main-nav"
+        aria-label="Open navigation menu"
+      >
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </button>
+
+      <nav class="main-nav" id="main-nav" aria-label="Main navigation">
+        <a href="index.html#home">Home</a>
+        <a href="our-approach.html" aria-current="page">Our Approach</a>
+        <a href="index.html#services">Services</a>
+        <a href="about.html">Resources</a>
+        <a href="about.html">About</a>
+      </nav>
+
+      <a class="btn btn-primary btn-small" href="#consultation-dialog" data-open-consultation>
+        Schedule a Free Consultation
+      </a>
+    </header>
+
+    <main id="main-content">
+      <section class="hero" id="home" aria-labelledby="hero-title">
+        <div class="hero-inner">
+          <div class="hero-copy">
+            <p class="eyebrow">RETIREMENT PROTECTION STRATEGY</p>
+            <h1 id="hero-title">DON'T LET ANOTHER BEAR MARKET DESTROY YOUR RETIREMENT DREAMS</h1>
+            <p class="hero-subtitle">Protect Your Retirement Accounts From the Next Market Downturn</p>
+            <p class="hero-description">
+              The stock market is unpredictable. A bear market can happen anytime — and it can
+              certainly impact your hard-earned savings. The good news: There are strategies to help
+              protect your retirement and keep your future on track.
+            </p>
+            <button class="button" type="button" data-open-consultation>
+              Schedule Your Free Consultation
+              <span aria-hidden="true">→</span>
+            </button>
+            <p class="trust-strip">
+              <span>Fiduciary Standard</span>
+              <span aria-hidden="true">•</span>
+              <span>No-Obligation Review</span>
+              <span aria-hidden="true">•</span>
+              <span>Custom Risk Analysis</span>
+            </p>
+          </div>
+
+          <section class="simulator" aria-labelledby="simulator-title">
+            <div class="simulator-heading">
+              <div>
+                <h2 id="simulator-title">Portfolio Resilience Simulator</h2>
+                <p>See how a hypothetical downturn may affect a portfolio.</p>
+              </div>
+              <span class="simulator-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M4 19V5m0 14h17M7 15l4-4 3 2 6-7M17 6h3v3" />
+                </svg>
+              </span>
+            </div>
+
+            <span class="scenario-label" id="scenario-label">Select Historical / Simulated Market Shock:</span>
+            <div class="scenario-list" role="group" aria-labelledby="scenario-label">
+              <button class="scenario-button" type="button" data-loss="22" aria-pressed="false">
+                -22% Correction
+              </button>
+              <button class="scenario-button" type="button" data-loss="38" aria-pressed="true">
+                -38% Bear Market
+              </button>
+              <button class="scenario-button" type="button" data-loss="50" aria-pressed="false">
+                2008 / 2022 Shock
+              </button>
+            </div>
+
+            <div class="slider-row">
+              <label class="slider-label" for="portfolio-slider">Starting portfolio</label>
+              <output class="portfolio-value" id="portfolio-value" for="portfolio-slider">$250,000</output>
+            </div>
+            <input
+              id="portfolio-slider"
+              type="range"
+              min="0"
+              max="59"
+              step="1"
+              value="29"
+              aria-label="Starting portfolio amount"
+              aria-valuetext="$250,000"
+            />
+            <div class="range-ends" aria-hidden="true">
+              <span>$25,000</span>
+              <span>$2,500,000</span>
+            </div>
+
+            <div class="chart-panel">
+              <div class="chart-legend" aria-hidden="true">
+                <span class="legend-item">
+                  <span class="legend-swatch"></span>
+                  Meridian Protected Strategy
+                </span>
+                <span class="legend-item">
+                  <span class="legend-swatch traditional"></span>
+                  Traditional 60/40
+                </span>
+              </div>
+              <svg
+                class="performance-chart"
+                viewBox="0 0 600 260"
+                role="img"
+                aria-labelledby="chart-title chart-description"
+              >
+                <title id="chart-title">Five-year hypothetical portfolio comparison</title>
+                <desc id="chart-description">
+                  A simulated market shock compares a protected retirement strategy with a
+                  traditional 60/40 portfolio.
+                </desc>
+                <defs>
+                  <linearGradient id="protected-gradient" x1="0" x2="0" y1="0" y2="1">
+                    <stop offset="0%" stop-color="#1e6b52" stop-opacity="0.16" />
+                    <stop offset="100%" stop-color="#1e6b52" stop-opacity="0.015" />
+                  </linearGradient>
+                </defs>
+                <g id="chart-grid"></g>
+                <path id="protected-area" class="protected-area"></path>
+                <path id="traditional-line" class="traditional-line"></path>
+                <path id="protected-line" class="protected-line"></path>
+                <circle id="traditional-trough-point" class="traditional-point" r="6.5"></circle>
+                <circle id="protected-trough-point" class="protected-point" r="7"></circle>
+                <g class="chart-year-label" text-anchor="middle">
+                  <text x="76" y="245">Yr 1</text>
+                  <text x="190" y="245">Shock</text>
+                  <text x="304" y="245">Yr 3</text>
+                  <text x="418" y="245">Yr 4</text>
+                  <text x="532" y="245">Yr 5</text>
+                </g>
+              </svg>
+            </div>
+
+            <div class="trough-summary" aria-live="polite">
+              <div class="trough-card">
+                <span class="trough-label">Protected Trough Value</span>
+                <strong class="trough-value" id="protected-value">$237,500</strong>
+                <span class="trough-detail" id="protected-detail">Capped downside (-5%)</span>
+              </div>
+              <div class="trough-card traditional">
+                <span class="trough-label">Unprotected Trough</span>
+                <strong class="trough-value" id="traditional-value">$155,000</strong>
+                <span class="trough-detail" id="traditional-detail">-$95,000 drawdown (-38%)</span>
+              </div>
+            </div>
+            <p class="simulator-note">
+              Hypothetical illustration only—not a forecast. The protected path assumes a 5%
+              maximum decline and illustrative gains; actual products, terms, limits, and outcomes vary.
+            </p>
+          </section>
+        </div>
+      </section>
+
+      <section class="section" id="pillars" aria-labelledby="pillars-title">
+        <div class="section-inner">
+          <div class="section-heading">
+            <p class="section-kicker">A THOUGHTFUL FRAMEWORK</p>
+            <h2 id="pillars-title">Five Pillars of a Resilient Retirement</h2>
+            <p>
+              A retirement plan should balance protection, income, taxes, and growth around what
+              matters to you. Explore the principles behind our approach.
+            </p>
+          </div>
+
+          <div class="pillar-grid">
+            <article class="pillar-card">
+              <span class="pillar-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M12 3 20 6v5.3c0 5.2-3.4 8.6-8 10.7-4.6-2.1-8-5.5-8-10.7V6l8-3Z" />
+                  <path d="m8.5 12 2.2 2.2 4.8-4.8" />
+                </svg>
+              </span>
+              <h3>Principal Protection</h3>
+              <p>Help safeguard your retirement savings from major market losses.</p>
+              <details>
+                <summary>Learn how it works</summary>
+                <p>
+                  Downside floor strategies and fixed indexed buffers can limit exposure to
+                  specified market losses, subject to their terms and limits. Capital preservation
+                  approaches aim to help keep a portion of savings available for future needs.
+                </p>
+              </details>
+            </article>
+
+            <article class="pillar-card">
+              <span class="pillar-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M4 19V5m0 14h17M7 15l4-4 3 2 6-7M17 6h3v3" />
+                  <path d="M7 8h.01M14 16h.01" />
+                </svg>
+              </span>
+              <h3>Diversification Strategies</h3>
+              <p>Reduce risk with a balanced approach beyond traditional stocks and bonds.</p>
+              <details>
+                <summary>Learn how it works</summary>
+                <p>
+                  Multi-asset correlation management considers how holdings may respond differently
+                  to changing conditions. Alternatives and tactical allocation can complement—not
+                  replace—a suitable core plan beyond a traditional 60/40 split.
+                </p>
+              </details>
+            </article>
+
+            <article class="pillar-card">
+              <span class="pillar-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M4 7h16v13H4zM7 4h10M8 11h8M8 15h5" />
+                  <path d="M12 7v2" />
+                </svg>
+              </span>
+              <h3>Guaranteed Income Options</h3>
+              <p>Create a steady income stream for retirement you’ve worked so hard for.</p>
+              <details>
+                <summary>Learn how it works</summary>
+                <p>
+                  Lifetime income options may create an income floor to help cover essential living
+                  expenses regardless of market volatility. Guarantees depend on the issuing
+                  institution’s claims-paying ability and the contract terms.
+                </p>
+              </details>
+            </article>
+
+            <article class="pillar-card">
+              <span class="pillar-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M12 3v18M17 7.5c0-1.4-1.8-2.5-4.5-2.5S8 6.1 8 7.5 9.8 10 12.5 10 17 11.1 17 12.5 15.2 15 12.5 15 8 13.9 8 12.5" />
+                </svg>
+              </span>
+              <h3>Tax-Efficient Solutions</h3>
+              <p>Keep more of what you earn with smart, tax-advantaged strategies.</p>
+              <details>
+                <summary>Learn how it works</summary>
+                <p>
+                  Roth conversion ladders, tax-bracket management, and required minimum
+                  distribution (RMD) optimization can help coordinate taxable income over time.
+                  Tax consequences are individual; consult a qualified tax professional.
+                </p>
+              </details>
+            </article>
+
+            <article class="pillar-card">
+              <span class="pillar-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M4 18V6m0 12h17M7 15l4-4 3 2 6-7M17 6h3v3" />
+                  <path d="M7 6h.01" />
+                </svg>
+              </span>
+              <h3>Long-Term Growth</h3>
+              <p>Build and protect your wealth for the next chapter of your life.</p>
+              <details>
+                <summary>Learn how it works</summary>
+                <p>
+                  Once principal and essential income needs are addressed, a plan can preserve
+                  appropriate upside participation for long-term goals. The allocation and
+                  potential tradeoffs depend on your time horizon and risk tolerance.
+                </p>
+              </details>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section market-section" aria-labelledby="market-title">
+        <div class="section-inner">
+          <div class="market-heading">
+            <p class="section-kicker">PREPARE WITH PURPOSE</p>
+            <h2 id="market-title">The Next Bear Market Could Be Closer Than You Think</h2>
+            <p>
+              History shows that bear markets are a normal part of the investment cycle. The real
+              question isn’t if it will happen — it’s how prepared you’ll be when it does.
+            </p>
+          </div>
+
+          <div class="reality-grid">
+            <article class="reality-card reality-downturn">
+              <span class="reality-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M4 19V5m0 14h17M7 9l4 4 3-3 5 5M16 15h3v-3" />
+                </svg>
+              </span>
+              <h3>Market downturns can reduce your account value.</h3>
+              <p>
+                A 40% portfolio loss requires a <strong>67% gain</strong> just to break even. When
+                you are actively withdrawing retirement income, sequence-of-returns risk can
+                permanently deplete your nest egg.
+              </p>
+              <div class="reality-stat">
+                <span>Recovery Asymmetry</span>
+                <strong>-40% Drop = +67% Needed</strong>
+              </div>
+            </article>
+
+            <article class="reality-card reality-inflation">
+              <span class="reality-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <circle cx="12" cy="12" r="8.5" />
+                  <path d="M12 7v5l3 2" />
+                </svg>
+              </span>
+              <h3>Inflation can erode your purchasing power.</h3>
+              <p>
+                Even moderate 3.5% annual inflation cuts the real value of fixed cash savings in
+                half over 20 years—quietly straining healthcare, housing, and lifestyle budgets.
+              </p>
+              <div class="reality-stat">
+                <span>20-Year Real Value Impact</span>
+                <strong>-50% Purchasing Power</strong>
+              </div>
+            </article>
+
+            <article class="reality-card reality-correlation">
+              <span class="reality-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <ellipse cx="12" cy="5" rx="8" ry="3" />
+                  <path d="M4 5v6c0 1.7 3.6 3 8 3s8-1.3 8-3V5M4 11v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6" />
+                  <path d="M4 11c0 1.7 3.6 3 8 3s8-1.3 8-3" />
+                </svg>
+              </span>
+              <h3>Traditional portfolios may not be enough.</h3>
+              <p>
+                Conventional stock-and-bond mixes often suffer when interest rate shifts cause
+                equities and fixed income to decline simultaneously—leaving retirees without a
+                true shock absorber.
+              </p>
+              <div class="reality-stat">
+                <span>Modern Correlation Risk</span>
+                <strong>Stocks &amp; Bonds Correlated</strong>
+              </div>
+            </article>
+          </div>
+
+          <div class="closing-callout">
+            <p>
+              The right strategy can help you weather the storm and stay on course for your
+              retirement goals.
+            </p>
+            <button class="button" type="button" data-open-consultation>
+              Schedule Your Free Consultation
+              <span aria-hidden="true">→</span>
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-bottom">
+        <div>
+          <p>
+            Securities and advisory services offered through [Broker-Dealer Name], Member FINRA/SIPC. Investment advisory services are offered through [RIA Name], a registered investment adviser.
+            This website is for informational purposes only and does not constitute a recommendation to buy or sell any security. Please consult with a qualified financial professional before making any investment decisions.
+            Past performance is not indicative of future results. All investments involve risk, including the possible loss of principal.
+          </p>
+        </div>
+        <p>(Insert your business name, license numbers,<br />and state registrations here)</p>
+      </div>
+    </footer>
+  </div>
+
+    <dialog id="consultation-dialog" aria-labelledby="consultation-title">
+      <div class="modal-content">
+        <div class="modal-topline">
+          <div>
+            <p class="section-kicker">A CONVERSATION, NOT A COMMITMENT</p>
+            <h2 id="consultation-title">Schedule Your Free Consultation</h2>
+          </div>
+          <button class="modal-close" type="button" aria-label="Close dialog" data-close-dialog>×</button>
+        </div>
+
+        <form id="consultation-form">
+          <p class="modal-intro">
+            Share a few details and we’ll be in touch to find a time that works for you.
+          </p>
+          <div class="form-fields">
+            <label>
+              Full Name
+              <input name="name" autocomplete="name" required />
+            </label>
+            <label>
+              Email
+              <input name="email" type="email" autocomplete="email" required />
+            </label>
+            <label>
+              Phone
+              <input name="phone" type="tel" autocomplete="tel" required />
+            </label>
+            <label>
+              Estimated Retirement Timeline
+              <select name="timeline" required>
+                <option value="" selected disabled>Select your timeline</option>
+                <option>&lt; 2 Years</option>
+                <option>2–5 Years</option>
+                <option>5–10 Years</option>
+                <option>Already Retired</option>
+              </select>
+            </label>
+          </div>
+          <p class="form-note">
+            Your information is only used to respond to your consultation request.
+          </p>
+          <button class="button form-submit" type="submit">Request My Consultation</button>
+        </form>
+
+        <div class="confirmation" id="consultation-confirmation" role="status" hidden>
+          <span class="confirmation-mark" aria-hidden="true">✓</span>
+          <h3>Thank you for reaching out.</h3>
+          <p>
+            This page doesn’t transmit your information or book an appointment. Please contact
+            Meridian directly to complete your request. There’s no obligation.
+          </p>
+          <button class="button" type="button" data-close-dialog>Close</button>
+        </div>
+      </div>
+    </dialog>
+
+    <script>
+      (function () {
+        var dialog = document.getElementById("consultation-dialog");
+        var form = document.getElementById("consultation-form");
+        var confirmation = document.getElementById("consultation-confirmation");
+        var slider = document.getElementById("portfolio-slider");
+        var portfolioValues = [];
+        for (var amount = 25000; amount <= 150000; amount += 5000) {
+          portfolioValues.push(amount);
+        }
+        for (amount = 175000; amount <= 500000; amount += 25000) {
+          portfolioValues.push(amount);
+        }
+        for (amount = 600000; amount <= 2500000; amount += 100000) {
+          portfolioValues.push(amount);
+        }
+        var currentLoss = 38;
+        var currency = new Intl.NumberFormat("en-US", {
+          style: "currency",
+          currency: "USD",
+          maximumFractionDigits: 0
+        });
+        var compactCurrency = new Intl.NumberFormat("en-US", {
+          style: "currency",
+          currency: "USD",
+          notation: "compact",
+          maximumFractionDigits: 1
+        });
+        var chartX = [76, 190, 304, 418, 532];
+        var chartTop = 18;
+        var chartBottom = 207;
+        var chartMaximum = 1.2;
+
+        function updateSimulator() {
+          var startingValue = portfolioValues[Number(slider.value)];
+          var protectedPath = [1, 0.95, 1.02, 1.1, 1.17];
+          var traditionalPath = [
+            1,
+            1 - currentLoss / 100,
+            (1 - currentLoss / 100) * 1.1,
+            (1 - currentLoss / 100) * 1.22,
+            (1 - currentLoss / 100) * 1.4
+          ];
+          var protectedTrough = startingValue * protectedPath[1];
+          var traditionalTrough = startingValue * traditionalPath[1];
+          var traditionalDrop = startingValue - traditionalTrough;
+          var chartMinimum = Math.max(
+            0.2,
+            Math.min(0.6, Math.floor((Math.min.apply(null, traditionalPath) - 0.001) * 5) / 5)
+          );
+          var chartHeight = chartBottom - chartTop;
+
+          document.getElementById("portfolio-value").textContent = currency.format(startingValue);
+          slider.setAttribute("aria-valuetext", currency.format(startingValue));
+          document.getElementById("protected-value").textContent = currency.format(protectedTrough);
+          document.getElementById("protected-detail").textContent = "Capped downside (-5%)";
+          document.getElementById("traditional-value").textContent = currency.format(traditionalTrough);
+          document.getElementById("traditional-detail").textContent =
+            "-" + currency.format(traditionalDrop) + " drawdown (-" + currentLoss + "%)";
+
+          function chartY(value) {
+            return chartTop + ((chartMaximum - value) / (chartMaximum - chartMinimum)) * chartHeight;
+          }
+
+          function linePath(values) {
+            return values.map(function (value, index) {
+              return (index === 0 ? "M " : "L ") + chartX[index] + " " + chartY(value).toFixed(2);
+            }).join(" ");
+          }
+
+          var protectedPathData = linePath(protectedPath);
+          var traditionalPathData = linePath(traditionalPath);
+          document.getElementById("protected-line").setAttribute("d", protectedPathData);
+          document.getElementById("traditional-line").setAttribute("d", traditionalPathData);
+          document.getElementById("protected-area").setAttribute(
+            "d",
+            protectedPathData + " L " + chartX[chartX.length - 1] + " " + chartBottom +
+              " L " + chartX[0] + " " + chartBottom + " Z"
+          );
+
+          var gridMarkup = "";
+          var tickCount = Math.round((chartMaximum - chartMinimum) / 0.2);
+          for (var tickIndex = 0; tickIndex <= tickCount; tickIndex += 1) {
+            var tickValue = chartMaximum - tickIndex * 0.2;
+            var tickY = chartY(tickValue);
+            var isBaseline = Math.abs(tickValue - chartMinimum) < 0.001;
+            gridMarkup +=
+              '<line class="chart-gridline' + (isBaseline ? " baseline" : "") +
+              '" x1="76" y1="' + tickY.toFixed(2) + '" x2="548" y2="' + tickY.toFixed(2) + '"></line>' +
+              '<text class="chart-axis-label" x="64" y="' + (tickY + 4).toFixed(2) +
+              '" text-anchor="end">' + compactCurrency.format(startingValue * tickValue) + "</text>";
+          }
+          document.getElementById("chart-grid").innerHTML = gridMarkup;
+
+          var protectedPoint = document.getElementById("protected-trough-point");
+          protectedPoint.setAttribute("cx", chartX[1]);
+          protectedPoint.setAttribute("cy", chartY(protectedPath[1]).toFixed(2));
+          var traditionalPoint = document.getElementById("traditional-trough-point");
+          traditionalPoint.setAttribute("cx", chartX[1]);
+          traditionalPoint.setAttribute("cy", chartY(traditionalPath[1]).toFixed(2));
+
+          document.getElementById("chart-description").textContent =
+            "Hypothetical five-year comparison for a " + currency.format(startingValue) +
+            " portfolio after a " + currentLoss + " percent market shock. The protected strategy " +
+            "trough is " + currency.format(protectedTrough) + "; the traditional 60/40 trough is " +
+            currency.format(traditionalTrough) + ".";
+        }
+
+        document.querySelectorAll(".scenario-button").forEach(function (button) {
+          button.addEventListener("click", function () {
+            currentLoss = Number(button.getAttribute("data-loss"));
+            document.querySelectorAll(".scenario-button").forEach(function (scenario) {
+              scenario.setAttribute("aria-pressed", scenario === button ? "true" : "false");
+            });
+            updateSimulator();
+          });
+        });
+
+        slider.addEventListener("input", updateSimulator);
+
+        document.querySelectorAll("[data-open-consultation]").forEach(function (button) {
+          button.addEventListener("click", function (event) {
+            event.preventDefault();
+            form.hidden = false;
+            confirmation.hidden = true;
+            form.reset();
+            dialog.showModal();
+          });
+        });
+
+        document.querySelectorAll("[data-close-dialog]").forEach(function (button) {
+          button.addEventListener("click", function () {
+            dialog.close();
+          });
+        });
+
+        form.addEventListener("submit", function (event) {
+          event.preventDefault();
+          if (!form.reportValidity()) return;
+          form.hidden = true;
+          confirmation.hidden = false;
+          confirmation.querySelector("button").focus();
+        });
+
+        document.querySelector(".menu-toggle").addEventListener("click", function (buttonEvent) {
+          var menuButton = buttonEvent.currentTarget;
+          var nav = document.getElementById("main-nav");
+          var isOpen = nav.classList.toggle("is-open");
+          menuButton.setAttribute("aria-expanded", isOpen ? "true" : "false");
+          menuButton.setAttribute("aria-label", isOpen ? "Close navigation menu" : "Open navigation menu");
+        });
+
+        document.querySelectorAll(".main-nav a").forEach(function (link) {
+          link.addEventListener("click", function () {
+            var nav = document.getElementById("main-nav");
+            var menuButton = document.querySelector(".menu-toggle");
+            nav.classList.remove("is-open");
+            menuButton.setAttribute("aria-expanded", "false");
+            menuButton.setAttribute("aria-label", "Open navigation menu");
+          });
+        });
+
+        updateSimulator();
+      })();
+    </script>
+  </body>
+</html>

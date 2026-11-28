@@ -1,0 +1,353 @@
+.about-page {
+  --about-blue: #2863ed;
+  --about-blue-soft: #e4edff;
+  --about-ink: #123d66;
+  --about-text: #294b72;
+  --about-muted: #607995;
+  --about-panel: #f3f6fc;
+  background: #fff;
+  color: var(--about-text);
+}
+
+.about-page .topbar {
+  background: #fff;
+}
+
+.about-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.85fr);
+  align-items: center;
+  gap: clamp(2rem, 7vw, 6.5rem);
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: clamp(3rem, 6vw, 5rem) clamp(2rem, 6vw, 5.5rem);
+  background: #edf3fd;
+}
+
+.about-eyebrow {
+  margin: 0 0 0.7rem;
+  color: var(--about-blue);
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+.about-hero-copy .about-eyebrow {
+  display: inline-block;
+  padding: 0.55rem 0.85rem;
+  border-radius: 999px;
+  background: var(--about-blue-soft);
+  letter-spacing: 0.08em;
+}
+
+.about-hero h1,
+.about-page h2 {
+  color: var(--about-ink);
+  font-family: var(--display-font);
+  font-weight: 700;
+}
+
+.about-hero h1 {
+  max-width: 680px;
+  margin: 0.65rem 0 1rem;
+  font-size: clamp(2.6rem, 4vw, 4.2rem);
+  line-height: 0.98;
+}
+
+.about-intro {
+  max-width: 650px;
+  margin: 0 0 1.45rem;
+  font-size: 1.04rem;
+  line-height: 1.75;
+}
+
+.about-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  min-height: 3.35rem;
+  padding: 0.9rem 1.45rem;
+  border-radius: 0.8rem;
+  background: var(--about-blue);
+  box-shadow: 0 12px 22px rgba(40, 99, 237, 0.22);
+  color: #fff;
+  font-weight: 800;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.about-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 25px rgba(40, 99, 237, 0.28);
+}
+
+.about-hero-photo {
+  width: min(100%, 410px);
+  justify-self: center;
+  margin: 0;
+  text-align: center;
+}
+
+.about-hero-photo img {
+  width: 100%;
+  aspect-ratio: 4 / 4.5;
+  object-fit: cover;
+  border-radius: 1.25rem;
+  box-shadow: 0 24px 48px rgba(20, 45, 80, 0.16);
+}
+
+.about-hero-photo figcaption {
+  margin-top: 0.75rem;
+  color: var(--about-muted);
+  font-size: 0.82rem;
+}
+
+.about-glance {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: clamp(3.2rem, 6vw, 5.2rem) clamp(2rem, 6vw, 5.5rem);
+  background: var(--about-panel);
+}
+
+.about-glance h2,
+.about-approach h2,
+.about-questions h2 {
+  margin: 0 0 1.25rem;
+  font-size: clamp(2rem, 3vw, 2.8rem);
+  line-height: 1.05;
+}
+
+.glance-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.glance-card,
+.approach-card {
+  border: 1px solid #dce5f1;
+  border-radius: 1rem;
+  background: #fff;
+}
+
+.glance-card {
+  min-height: 150px;
+  padding: 1.25rem 1.4rem;
+}
+
+.glance-card h3,
+.approach-card h3,
+.question h3 {
+  margin: 0 0 0.35rem;
+  color: var(--about-ink);
+  font-family: var(--display-font);
+  font-size: 1.35rem;
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+.glance-card p,
+.approach-card p,
+.question p {
+  margin: 0;
+  line-height: 1.7;
+}
+
+.about-mission {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: clamp(3.5rem, 7vw, 6rem) 2rem;
+}
+
+.about-mission h2 {
+  margin: 0 0 0.8rem;
+  font-size: clamp(2rem, 3vw, 2.7rem);
+  line-height: 1.05;
+}
+
+.about-mission > p:not(.about-eyebrow) {
+  margin: 0 0 1rem;
+  line-height: 1.75;
+}
+
+.about-highlight {
+  color: var(--about-blue);
+}
+
+.about-approach {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: clamp(3rem, 6vw, 4.5rem) clamp(2rem, 6vw, 5.5rem);
+  background: var(--about-panel);
+  text-align: center;
+}
+
+.about-approach > .about-eyebrow {
+  margin-bottom: 0.45rem;
+}
+
+.approach-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.approach-card {
+  min-height: 190px;
+  padding: 1.6rem 1.25rem;
+  box-shadow: 0 12px 24px rgba(20, 45, 80, 0.04);
+}
+
+.approach-number {
+  display: block;
+  margin-bottom: 0.4rem;
+  color: var(--about-blue);
+  font-size: 1.3rem;
+  font-weight: 800;
+}
+
+.about-questions {
+  max-width: 850px;
+  margin: 0 auto;
+  padding: clamp(3.5rem, 7vw, 6rem) 2rem;
+}
+
+.about-questions h2 {
+  margin-bottom: 1.35rem;
+}
+
+.question {
+  margin-top: 1.2rem;
+}
+
+.question h3 {
+  margin-bottom: 0.2rem;
+}
+
+.about-bio {
+  max-width: 1050px;
+  margin: 0 auto clamp(3rem, 6vw, 5rem);
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+  border: 1px solid #dce5f1;
+  border-radius: 0.6rem;
+  background: #fff;
+}
+
+.about-bio h2 {
+  margin: 0 0 0.85rem;
+  font-family: "Inter", sans-serif;
+  font-size: 1.3rem;
+}
+
+.about-bio p {
+  margin: 0;
+  line-height: 1.75;
+}
+
+.about-bio blockquote {
+  margin: 1rem 0 0;
+  padding-top: 0.9rem;
+  border-top: 1px dashed #cbd8e8;
+  color: var(--about-blue);
+  font-style: italic;
+  line-height: 1.7;
+}
+
+.about-contact {
+  padding: clamp(3.5rem, 7vw, 5rem) 2rem;
+  background: #102653;
+  color: #d7e4ff;
+  text-align: center;
+}
+
+.about-contact h2 {
+  margin: 0 0 0.75rem;
+  color: #fff;
+  font-size: clamp(2rem, 3vw, 2.8rem);
+  line-height: 1.1;
+}
+
+.about-contact > p:not(.about-contact-details) {
+  max-width: 620px;
+  margin: 0 auto 1.6rem;
+  line-height: 1.7;
+}
+
+.about-contact .about-button {
+  margin-bottom: 1.25rem;
+}
+
+.about-contact-details {
+  max-width: 600px;
+  margin: 0 auto;
+  color: #a9c5f3;
+  font-size: 0.92rem;
+  line-height: 1.7;
+}
+
+.about-contact-details a {
+  white-space: nowrap;
+}
+
+@media (max-width: 760px) {
+  .about-hero {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 2.5rem 1.35rem;
+    text-align: center;
+  }
+
+  .about-hero h1,
+  .about-intro {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .about-hero-photo {
+    max-width: 360px;
+  }
+
+  .about-glance,
+  .about-approach {
+    padding: 3rem 1.25rem;
+  }
+
+  .about-mission,
+  .about-questions {
+    padding: 3.25rem 1.25rem;
+  }
+
+  .approach-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .approach-card {
+    min-height: 0;
+  }
+
+  .about-bio {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+}
+
+@media (max-width: 540px) {
+  .about-hero h1 {
+    font-size: 2.35rem;
+  }
+
+  .glance-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .glance-card {
+    min-height: 0;
+  }
+
+  .about-contact {
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
+  }
+}
